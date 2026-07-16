@@ -416,7 +416,7 @@ async function saveViaGithub(jsonStr) {
     try {
         const resp = await fetch(url, {
             headers: {
-                'Authorization': `token ${CONFIG.githubToken}`,
+                'Authorization': `Bearer ${CONFIG.githubToken}`,
                 'Accept': 'application/vnd.github+json'
             }
         });
