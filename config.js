@@ -17,6 +17,8 @@ const CONFIG = {
     // 轮询间隔（毫秒）
     pollInterval: 10000,
 
-    // 数据源 URL（空 = 使用 GitHub Pages URL 自动拼接）
-    dataSource: '',
+    // 数据源 URL
+    // 使用 raw.githubusercontent.com（不依赖 Pages 是否开启，CDN 有约5分钟缓存）
+    // Pages 开启后也可改为 '' 使用同源 URL（无缓存延迟）
+    dataSource: 'https://raw.githubusercontent.com/ribrini/excel-sync/main',
 };
