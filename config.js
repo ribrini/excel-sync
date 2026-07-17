@@ -1,9 +1,9 @@
 // ============================================================
-// config.js - 网页配置文件
+// config_template.js - 网页配置模板（部署时被替换 dataSource）
 // ============================================================
 
 const CONFIG = {
-    // GitHub 仓库信息
+    // GitHub 仓库信息（部署时由 setup_new_project.py 替换）
     githubUser: 'ribrini',
     githubRepo: 'excel-sync',
     githubBranch: 'main',
@@ -17,8 +17,7 @@ const CONFIG = {
     // 轮询间隔（毫秒）
     pollInterval: 10000,
 
-    // 数据源 URL
-    // 使用 raw.githubusercontent.com（不依赖 Pages 是否开启，CDN 有约5分钟缓存）
-    // Pages 开启后也可改为 '' 使用同源 URL（无缓存延迟）
-    dataSource: 'https://raw.githubusercontent.com/ribrini/excel-sync/main',
+    // 数据源 URL（部署时由 setup_new_project.py 替换为对应仓库的 raw URL）
+    // 留空时使用上面的 githubUser/githubRepo/githubBranch 自动拼接
+    dataSource: 'https://raw.githubusercontent.com/ribrini/excel-sync/main/data.json',
 };
